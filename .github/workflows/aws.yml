@@ -83,7 +83,7 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: test-app-service2
+        service: test-balancer
         cluster: test-app
         # wait-for-service-stability: true
     # - name: Update Claster 
