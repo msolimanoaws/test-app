@@ -86,3 +86,8 @@ jobs:
         service: test-app-service
         cluster: test-app
         # wait-for-service-stability: true
+    - name: Update Claster 
+      id: update-task
+      run: |
+        aws ecs update-service --cluster test-app --service test-app-service --force-new-deployment
+ 
